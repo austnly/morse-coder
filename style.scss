@@ -1,0 +1,85 @@
+// body {
+// 	display: flex;
+// 	flex-direction: column;
+// }
+
+// .translator {
+// 	display: flex;
+// 	flex-direction: column;
+
+// 	&__input {
+// 		font-size: 1rem;
+
+// 		&--morse {
+// 			letter-spacing: 0.5rem;
+// 			word-spacing: 1rem;
+// 		}
+// 	}
+
+// 	&__btn {
+// 		background-color: aquamarine;
+// 	}
+
+// 	&__morse {
+// 		border: 1px solid black;
+
+// 		display: flex;
+// 		flex-direction: column;
+
+// 		&__text {
+// 			white-space: pre; // don't ignore multiple white spaces
+// 		}
+
+// 		&__buttons {
+// 			display: grid;
+// 			grid-template-columns: repeat(3, 50px);
+// 			gap: 10px;
+
+// 			&__btn {
+// 				background-color: cadetblue;
+// 				text-align: center;
+// 			}
+// 		}
+// 	}
+// }
+
+// html,
+// body,
+// main {
+// 	// height: 100vh;
+// }
+
+main {
+	// background-color: rgb(77, 77, 77);
+}
+
+.translator {
+	// background-color: white;
+	// color: black;
+	// border-radius: 50px;
+	// box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.4);
+
+	&__btn {
+		width: 50px;
+	}
+}
+
+.morse {
+	&__btn {
+		width: 40px;
+	}
+}
+
+.eng-label,
+.morse-label {
+	@media only screen and (max-width: 575.98px) {
+		display: none;
+	}
+}
+
+#translator__input--eng,
+#translator__input--mor {
+	@media only screen and (max-width: 575.98px) {
+		border-radius: 0.3rem;
+	}
+}

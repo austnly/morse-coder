@@ -10,13 +10,20 @@
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="style.css" />
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
 		<script defer src="script.js"></script>
+
+		<link rel="stylesheet" href="style.css" />
 		<title>Morse Coder | Morse Code Translater</title>
 	</head>
 	<body>
-		<main>
-			<div class="px-4 py-5 my-5 text-center">
+		<main class="min-vh-100 d-flex flex-column justify-content-center">
+			<div class="p-4 text-center translator">
 				<h1 class="display-5 fw-bold">Morse Coder</h1>
 				<div class="col-lg-6 mx-auto">
 					<p class="lead mb-4">
@@ -24,8 +31,9 @@
 						Morse Code.
 					</p>
 					<div class="input-group input-group-lg">
-						<span class="input-group-text">English</span>
+						<span class="input-group-text eng-label">English</span>
 						<textarea
+							id="translator__input--eng"
 							class="form-control translator__input translator__input--eng"
 							aria-label="English"
 							placeholder="Enter Text Here"
@@ -47,10 +55,22 @@
 							checked
 						/>
 						<label
-							class="btn btn-outline-success btn-lg eng-to-mor"
+							class="btn btn-outline-success btn-lg eng-to-mor translator__btn"
 							for="eng-to-mor"
+							data-bs-toggle="tooltip"
+							data-bs-placement="left"
+							title="Translate to Morse"
 							>&dArr;</label
 						>
+						<button
+							type="button"
+							class="btn btn-outline-dark translator__btn translator__btn--clr"
+							data-bs-toggle="tooltip"
+							data-bs-placement="top"
+							title="Clear"
+						>
+							&circlearrowleft;
+						</button>
 
 						<input
 							type="radio"
@@ -60,30 +80,79 @@
 							autocomplete="off"
 						/>
 						<label
-							class="btn btn-outline-danger btn-lg mor-to-eng"
+							class="btn btn-outline-danger btn-lg mor-to-eng translator__btn"
 							for="mor-to-eng"
+							data-bs-toggle="tooltip"
+							data-bs-placement="right"
+							title="Translate from Morse"
 							>&uArr;</label
 						>
-
-						<button
-							type="button"
-							class="btn btn-outline-dark translator__btn--clr"
-						>
-							&circlearrowleft;
-						</button>
 					</div>
 
 					<div class="input-group input-group-lg">
-						<span class="input-group-text">Morse</span>
+						<span class="input-group-text morse-label">Morse</span>
 						<textarea
+							id="translator__input--mor"
 							class="form-control translator__input translator__input--mor"
-							aria-label="English"
+							aria-label="Morse"
 							placeholder="Morse Code Appears Here"
 							readonly
 						></textarea>
+						<span class="input-group-text d-flex flex-column">
+							<div class="row">
+								<button
+									type="button"
+									class="btn btn-outline-primary morse__btn morse__btn--dot m-1"
+									disabled
+								>
+									.
+								</button>
+								<button
+									type="button"
+									class="btn btn-outline-primary morse__btn morse__btn--dash m-1"
+									disabled
+								>
+									-
+								</button>
+							</div>
+							<div class="row">
+								<button
+									type="button"
+									class="btn btn-outline-secondary morse__btn morse__btn--charSpace m-1"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									title="Next Character"
+									disabled
+								>
+									&blank;
+								</button>
+								<button
+									type="button"
+									class="btn btn-outline-secondary morse__btn morse__btn--space m-1"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									title="Next Word"
+									disabled
+								>
+									/
+								</button>
+							</div>
+							<div class="row">
+								<button
+									type="button"
+									class="btn btn-outline-danger morse__btn morse__btn--del m-1"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									title="Backspace"
+									disabled
+								>
+									&#9003;
+								</button>
+							</div>
+						</span>
 					</div>
 				</div>
-				<p class="my-5">Built by Austin.</p>
+				<p class="mt-5">Built by Austin.</p>
 			</div>
 		</main>
 	</body>

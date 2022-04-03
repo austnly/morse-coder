@@ -1,1 +1,21 @@
+.translator__btn {
+  width: 50px;
+}
 
+.morse__btn {
+  width: 40px;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .eng-label,
+.morse-label {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  #translator__input--eng,
+#translator__input--mor {
+    border-radius: 0.3rem;
+  }
+}
