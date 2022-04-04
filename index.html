@@ -17,34 +17,45 @@
 			crossorigin="anonymous"
 		></script>
 		<script defer src="script.js"></script>
-
 		<link rel="stylesheet" href="style.css" />
 		<title>Morse Coder | Morse Code Translater</title>
 	</head>
 	<body>
 		<main class="min-vh-100 d-flex flex-column justify-content-center">
-			<div class="p-4 text-center translator">
-				<h1 class="display-5 fw-bold">Morse Coder</h1>
-				<div class="col-lg-6 mx-auto">
-					<p class="lead mb-4">
+			<div
+				class="p-3 text-center d-flex flex-column align-items-center body"
+			>
+				<h1 class="display-5 fw-bold body--head">Morse Coder</h1>
+				<div class="col-md-8 translator">
+					<p class="lead mb-4 translator__desc">
 						Interactive translator between Latin (English) text and
-						Morse Code.
+						Morse Code. Hover
+						<em
+							data-bs-toggle="tooltip"
+							data-bs-placement="bottom"
+							data-bs-html="true"
+							title="Select direction of translation and use keyboard or input buttons for Morse input.<br />&blank; is a space between morse characters.<br />/ is a space between words. <br />Multiple &blank; will be interpreted as a space between words.<br />Invalid morse code will show as �.<br />⌫ deletes the last character ignoring spaces. <br />Happy translating!"
+							>here</em
+						>
+						for instructions.
 					</p>
-					<div class="input-group input-group-lg">
-						<span class="input-group-text eng-label">English</span>
+					<div
+						class="input-group input-group-lg translator__input translator__input--eng"
+					>
+						<span class="input-group-text translator__input--label"
+							>English</span
+						>
 						<textarea
-							id="translator__input--eng"
-							class="form-control translator__input translator__input--eng"
+							id="translator__input__box--eng"
+							class="form-control translator__input__box translator__input__box--eng"
 							aria-label="English"
 							placeholder="Enter Text Here"
 						></textarea>
 					</div>
 
 					<!-- Translation Buttons -->
-					<!-- Add Tooltip over buttons -->
-					<!-- Make button widths even -->
 					<div
-						class="d-grid gap-2 d-flex justify-content-center my-4"
+						class="d-grid gap-2 d-flex justify-content-center my-4 translator__btns"
 					>
 						<input
 							type="radio"
@@ -55,7 +66,7 @@
 							checked
 						/>
 						<label
-							class="btn btn-outline-success btn-lg eng-to-mor translator__btn"
+							class="btn btn-outline-success btn-lg translator__btn translator__btn--e2m"
 							for="eng-to-mor"
 							data-bs-toggle="tooltip"
 							data-bs-placement="left"
@@ -64,7 +75,7 @@
 						>
 						<button
 							type="button"
-							class="btn btn-outline-dark translator__btn translator__btn--clr"
+							class="btn btn-outline-secondary translator__btn translator__btn--clr"
 							data-bs-toggle="tooltip"
 							data-bs-placement="top"
 							title="Clear"
@@ -80,7 +91,7 @@
 							autocomplete="off"
 						/>
 						<label
-							class="btn btn-outline-danger btn-lg mor-to-eng translator__btn"
+							class="btn btn-outline-danger btn-lg translator__btn translator__btn--m2e"
 							for="mor-to-eng"
 							data-bs-toggle="tooltip"
 							data-bs-placement="right"
@@ -89,27 +100,33 @@
 						>
 					</div>
 
-					<div class="input-group input-group-lg">
-						<span class="input-group-text morse-label">Morse</span>
+					<div
+						class="input-group input-group-lg translator__input translator__input--mor"
+					>
+						<span class="input-group-text translator__input--label"
+							>Morse</span
+						>
 						<textarea
-							id="translator__input--mor"
-							class="form-control translator__input translator__input--mor"
+							id="translator__input__box--mor"
+							class="form-control translator__input__box translator__input__box--mor"
 							aria-label="Morse"
 							placeholder="Morse Code Appears Here"
 							readonly
 						></textarea>
-						<span class="input-group-text d-flex flex-column">
+						<span
+							class="input-group-text d-flex flex-column translator__input__btns"
+						>
 							<div class="row">
 								<button
 									type="button"
-									class="btn btn-outline-primary morse__btn morse__btn--dot m-1"
+									class="btn btn-outline-primary translator__input__btns_btn translator__input__btns_btn--dot m-1"
 									disabled
 								>
 									.
 								</button>
 								<button
 									type="button"
-									class="btn btn-outline-primary morse__btn morse__btn--dash m-1"
+									class="btn btn-outline-primary translator__input__btns_btn translator__input__btns_btn--dash m-1"
 									disabled
 								>
 									-
@@ -118,7 +135,7 @@
 							<div class="row">
 								<button
 									type="button"
-									class="btn btn-outline-secondary morse__btn morse__btn--charSpace m-1"
+									class="btn btn-outline-secondary translator__input__btns_btn translator__input__btns_btn--charSpace m-1"
 									data-bs-toggle="tooltip"
 									data-bs-placement="bottom"
 									title="Next Character"
@@ -128,7 +145,7 @@
 								</button>
 								<button
 									type="button"
-									class="btn btn-outline-secondary morse__btn morse__btn--space m-1"
+									class="btn btn-outline-secondary translator__input__btns_btn translator__input__btns_btn--space m-1"
 									data-bs-toggle="tooltip"
 									data-bs-placement="bottom"
 									title="Next Word"
@@ -140,7 +157,7 @@
 							<div class="row">
 								<button
 									type="button"
-									class="btn btn-outline-danger morse__btn morse__btn--del m-1"
+									class="btn btn-outline-danger translator__input__btns_btn translator__input__btns_btn--del m-1"
 									data-bs-toggle="tooltip"
 									data-bs-placement="bottom"
 									title="Backspace"

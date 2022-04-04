@@ -1,21 +1,20 @@
-.translator__btn {
-  width: 50px;
+main {
+  background: linear-gradient(#677b99, #303447);
+  color: white;
 }
 
-.morse__btn {
+@media only screen and (max-width: 575.98px) {
+  .translator__input--label {
+    display: none;
+  }
+}
+.translator__input__btns_btn {
   width: 40px;
 }
 
 @media only screen and (max-width: 575.98px) {
-  .eng-label,
-.morse-label {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 575.98px) {
-  #translator__input--eng,
-#translator__input--mor {
+  #translator__input__box--eng,
+#translator__input__box--mor {
     border-radius: 0.3rem;
   }
 }

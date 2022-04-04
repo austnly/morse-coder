@@ -57,10 +57,10 @@
 
 const translateBtn = document.querySelector("#eng-to-mor");
 const backTransBtn = document.querySelector("#mor-to-eng");
-const eng = document.querySelector(".translator__input--eng");
-const morse = document.querySelector(".translator__input--mor");
+const eng = document.querySelector(".translator__input__box--eng");
+const morse = document.querySelector(".translator__input__box--mor");
 const clearBtn = document.querySelector(".translator__btn--clr");
-const morseBtns = document.querySelectorAll(".morse__btn");
+const morseBtns = document.querySelectorAll(".translator__input__btns_btn");
 
 // Enabling Bootstrap Tooltips
 var tooltipTriggerList = [].slice.call(
@@ -293,7 +293,9 @@ morseBtns.forEach((btn) => {
 		} else if (btn.innerText === "␣") {
 			morse.value += " ";
 		} else if (btn.innerText === "⌫") {
-			morse.value = morse.value.substring(0, morse.value.length - 1);
+			morse.value = morse.value
+				.trim()
+				.substring(0, morse.value.trim().length - 1);
 		} else {
 			morse.value += btn.innerText;
 		}
@@ -307,3 +309,5 @@ clearBtn.addEventListener("click", () => {
 });
 
 // change displayed spaces to "/"
+
+// add a dictionary reference
