@@ -269,6 +269,8 @@ translateBtn.addEventListener("change", () => {
 		console.log("translate button click registered");
 		eng.removeAttribute("readonly");
 		morse.setAttribute("readonly", "");
+		eng.setAttribute("placeholder", "Enter text here");
+		morse.setAttribute("placeholder", "Translation appears here");
 		morseBtns.forEach((btn) => {
 			btn.setAttribute("disabled", "");
 		});
@@ -279,6 +281,8 @@ backTransBtn.addEventListener("change", () => {
 	if (morse.hasAttribute("readonly")) {
 		console.log("back translate button click registered");
 		morse.removeAttribute("readonly");
+		morse.setAttribute("placeholder", "Enter text here");
+		eng.setAttribute("placeholder", "Translation appears here");
 		eng.setAttribute("readonly", "");
 		morseBtns.forEach((btn) => {
 			btn.removeAttribute("disabled");

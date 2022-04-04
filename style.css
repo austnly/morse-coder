@@ -1,8 +1,12 @@
-main {
+html,
+body {
   background: linear-gradient(#677b99, #303447);
   color: white;
 }
 
+.translator__btn {
+  width: 50px;
+}
 @media only screen and (max-width: 575.98px) {
   .translator__input--label {
     display: none;
@@ -15,6 +19,7 @@ main {
 @media only screen and (max-width: 575.98px) {
   #translator__input__box--eng,
 #translator__input__box--mor {
-    border-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
   }
 }

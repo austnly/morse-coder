@@ -1,4 +1,5 @@
-main {
+html,
+body {
 	background: linear-gradient(rgb(103, 123, 153), rgb(48, 52, 71));
 	color: white;
 }
@@ -16,6 +17,9 @@ main {
 
 	// &__desc {
 	// }
+	&__btn {
+		width: 50px;
+	}
 
 	&__input {
 		&--label {
@@ -45,6 +49,7 @@ main {
 #translator__input__box--eng,
 #translator__input__box--mor {
 	@media only screen and (max-width: 575.98px) {
-		border-radius: 0.3rem;
+		border-top-left-radius: 0.3rem;
+		border-bottom-left-radius: 0.3rem;
 	}
 }
