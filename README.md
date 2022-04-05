@@ -56,6 +56,7 @@ I encountered the following issues during implementation and implemented a fix f
 - [x] Awkward keyboard input on mobile => Added input buttons for Morse, as well as spaces and backspaces
 - [x] Inconsistent whitespaces in Morse input => Used Regular Expressions to ensure single spaces refer to Morse character spaces, any consecutive whitespaces or "/" with adjacent spaces would translate to word spaces in the English output
 - [x] Event Listeners for textarea "change" and "input" would not trigger translation to update when using the Morse Input buttons => Called the translation functions to update on any input button click
+- [x] Poor appearance on smaller screens due to width of left input-group labels => Media queries added to change visibility of labels with display: none, and border-radius added to left corners of textarea inputs to match original styling
 
 ## Future Additions
 
