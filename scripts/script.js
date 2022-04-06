@@ -1,4 +1,5 @@
-import { latinToMorse, engToMorse, morseToEng } from "./translator.js";
+import { engToMorse, morseToEng } from "./translator.js";
+import latinToMorse from "./dictionary.js";
 
 // Declaring element variables
 const translateBtn = document.querySelector("#eng-to-mor");

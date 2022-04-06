@@ -6,11 +6,11 @@ export const engToMorse = (english, dictionary) => {
 		.map((char) => {
 			// Map each character to Morse
 			let newChar = Object.entries(dictionary).find(
-				(element) => element[0] === char,
-			)[1];
+				([character, morse]) => character === char,
+			);
 			// Find and return the key-value pair with the matching character key
 			// Return the Morse value matching the key
-			return newChar;
+			return newChar ? newChar[1] : "�";
 		})
 		.join(" ");
 	// Join Morse characters by a space - white space is returned as "/"
@@ -49,53 +49,4 @@ export const morseToEng = (morse, dictionary) => {
 		})
 		.join(" ") // Join the array of words
 		.toUpperCase(); // Convert to uppercase
-};
-
-export const latinToMorse = {
-	0: "-----",
-	1: ".----",
-	2: "..---",
-	3: "...--",
-	4: "....-",
-	5: ".....",
-	6: "-....",
-	7: "--...",
-	8: "---..",
-	9: "----.",
-	a: ".-",
-	b: "-...",
-	c: "-.-.",
-	d: "-..",
-	e: ".",
-	f: "..-.",
-	g: "--.",
-	h: "....",
-	i: "..",
-	j: ".---",
-	k: "-.-",
-	l: ".-..",
-	m: "--",
-	n: "-.",
-	o: "---",
-	p: ".--.",
-	q: "--.-",
-	r: ".-.",
-	s: "...",
-	t: "-",
-	u: "..-",
-	v: "...-",
-	w: ".--",
-	x: "-..-",
-	y: "-.--",
-	z: "--..",
-	".": ".-.-.-",
-	",": "--..--",
-	"?": "..--..",
-	"!": "-.-.--",
-	"-": "-....-",
-	"/": "-..-.",
-	"@": ".--.-.",
-	"(": "-.--.",
-	")": "-.--.-",
-	" ": "/",
 };
