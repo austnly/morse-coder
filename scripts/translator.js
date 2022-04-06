@@ -10,6 +10,7 @@ export const engToMorse = (english, dictionary) => {
 			);
 			// Find and return the key-value pair with the matching character key
 			// Return the Morse value matching the key
+			// Return "�" if no valid corresponding Morse character
 			return newChar ? newChar[1] : "�";
 		})
 		.join(" ");
