@@ -4,7 +4,7 @@
 
 A project that uses objects, complex data, and DOM manipulation in JavaScript and HTML to allow interactive translation of English text into Morse Code as well as the reverse.
 
-### 🚀 [Launch Live Project](https://austnly.github.io/morse-coder/).
+### 🚀 [Launch Live Project](https://austnly.github.io/morse-coder/)
 
 ## Table of Contents
 
