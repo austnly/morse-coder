@@ -4,13 +4,25 @@
 
 A project that uses objects, complex data, and DOM manipulation in JavaScript and HTML to allow interactive translation of English text into Morse Code as well as the reverse.
 
-## Launch
+### 🚀 [Launch Live Project](https://austnly.github.io/morse-coder/).
 
-The live project can be launched [here](https://austnly.github.io/morse-coder/).
+## Table of Contents
+
+-   [Screenshots](#screenshots)
+-   [Goals](#goals)
+-   [Tech Stack](#tech-stack)
+-   [Implementation](#implementation)
+    -   [MVP](#mvp)
+    -   [Logic Plan](#logic-plan)
+    -   [Coding Process](#code)
+    -   [Issues Addressed](#issues-addressed)
+-   [Future Additions](#future-additions)
+
+## Screenshots
 
 <figure>
-<img src="./img/final.png" width="300px" alt="Live Project Screenshot" />
 <figcaption><i>Live Project Screenshot</i></figcaption>
+<img src="./img/final.png" width="300px" alt="Live Project Screenshot" />
 </figure>
 
 ## Goals
@@ -20,13 +32,22 @@ The live project can be launched [here](https://austnly.github.io/morse-coder/).
 -   To create a functional, intuitive translator interface using the **Bootstrap** framework
 -   To use unit-testing for validation of essential translation functions
 
+## Tech Stack
+
+-   HTML
+-   CSS/SCSS
+-   JavaScript
+    -   [Jest Unit Testing](https://jestjs.io)
+-   Git
+-   [Bootstrap](https://getbootstrap.com)
+
+## Implementation
+
 ### MVP
 
 1. Create a user interface that allows the user to either input some English text or some Morse Code
 1. Create JS functions that would allow the user to translate their English text into Morse Code or Morse Code into English text
 1. Make sure to handle spaces properly (ie. there is 1 space between English words, but one space between Morse Code characters)
-
-## Implementation
 
 ### Logic Plan
 
@@ -39,7 +60,7 @@ Prior to coding the JavaScript, I formed a plan for the logic of the translator 
 1. The output field should update with this string
 1. The reverse should also be allowed, but preferably only if the mode is selected by the user by clicking a button
 
-### Code
+### Coding Process
 
 1. I started with a Morse Code [reference object](https://gist.github.com/mohayonao/094c71af14fe4791c5dd) available on github gists.
 1. I structured the HTML and SCSS using a [template](https://getbootstrap.com/docs/5.1/examples/heroes/) and [input](https://getbootstrap.com/docs/5.1/forms/input-group/) and [button](https://getbootstrap.com/docs/5.1/components/buttons/) components from the Bootstrap docs.
